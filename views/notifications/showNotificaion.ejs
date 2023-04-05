@@ -1,0 +1,10 @@
+<%- include('../partials/header.ejs') %>
+<%for(let notif of notifications){%>
+    <div><%=notif.title%></div>
+    <div><%=notif.details%></div>
+    <form action="/notification/<%=notif._id%>?_method=DELETE" method="post">
+        <input type="submit" value="delete">
+    </form>
+<%}%>
+
+<%- include('../partials/footer.ejs') %>

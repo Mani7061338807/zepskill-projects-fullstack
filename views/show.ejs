@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+    <link rel="stylesheet" type="text/css" href="body.css" />
+    <div class="container text-center">
+        <div class="row">
+            <% for(let job of alljobs){%>
+                <div class="col-4">
+                    <div>
+                        <%= job.name %>
+                    </div>
+                    <div>
+                        <%=job.address%>
+                    </div>
+                    <h1>
+                        <%=job.package%>
+                    </h1>
+                    <div><img src="<%= job.image%>" alt=""></div>
+
+                    <form action="/jobs/<%=job._id%>" method="get">
+                        <input type="submit" value="details">
+                    </form>
+                </div>
+                <%}%>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>

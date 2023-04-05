@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs') %>
+<div class="row">
+    <div class="col-6 m-auto">
+        <h1>update form</h1>
+        <form action="/user/<%=user._id%>?_method=PATCH" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="text" class="form-control" id="email" name="username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">password</label>
+                <input type="text" class="form-control" id="password" name="password">
+            </div>
+            <div class="mb-3">
+                <input type="radio" id="age1" name="isAdmin" value="true">
+                <label for="age1">sign as admin</label><br>
+                <input type="radio" id="age2" name="isAdmin" value="false">
+                <label for="age2">sign as user</label><br>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">name</label>
+                <input type="text" class="form-control" id="password" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">cgpa</label>
+                <input type="text" class="form-control" id="password" name="cgpa">
+            </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="update">
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

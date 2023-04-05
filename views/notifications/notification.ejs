@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs') %>
+   
+   <form action="/notification" method="post">
+    <div>
+        <label for="">
+           enter job title
+         <input type="text" name="title">
+    </div>
+    <div>
+        <label for="">job details 
+         <input type="text" name="details">
+    </div>
+    
+    <input type="submit" value="add notification">
+   </form>
+   
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs') %>
+
+
+<div class="row">
+    <div class="col-6 m-auto">
+        <h1>test for getJob: <%= getJob.name %></h1>
+        <form action="/jobs/<%= getJob._id %>/test" method="post">
+            <% for(let i in getJob.questions) { %>
+            <div><%= getJob.questions[i].description %></div>
+            <div class="form-check">
+                <input required class="form-check-input" type="radio" name="answers[<%= i %>]" id="option1"
+                    value="option1">
+                <label class="form-check-label" for="option1">
+                    <%= getJob.questions[i].option1 %>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answers[<%= i %>]" id="option2" value="option2">
+                <label class="form-check-label" for="option2">
+                    <%= getJob.questions[i].option2 %>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answers[<%= i %>]" id="option3" value="option3">
+                <label class="form-check-label" for="option3">
+                    <%= getJob.questions[i].option3 %>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answers[<%= i %>]" id="option4" value="option4">
+                <label class="form-check-label" for="option4">
+                    <%= getJob.questions[i].option4 %>
+                </label>
+            </div>
+            <% } %>
+            <div>
+                <input class="btn btn-primary" type="submit" value="submit answer">
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

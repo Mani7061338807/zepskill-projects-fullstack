@@ -1,0 +1,9 @@
+<%- include('./partials/header.ejs') %>
+    <h1><%=found.name%></h1>
+    <img src="<%=found.image%>" alt="">
+    <a href="/jobs/<%=found._id%>/edit">edit</a>
+    <p><%=found.package%></p>
+    <form action="/jobs/<%=found._id%>?_method=DELETE" method="post" >
+        <input type="submit" value="delete">
+    </form>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,23 @@
+<%- include('./partials/header.ejs') %>
+    <h1>edit page for <%=found.name%></h1>
+   <form action="/jobs/<%=found._id%>?_method=PATCH" method="post">
+    <div>
+        <label for="">
+           enter job name
+         <input type="text" name="name">
+    </div>
+    <div>
+        <label for="">enter address 
+         <input type="text" name="address">
+    </div>
+    <div>
+        <label for="">enter image url</label>
+        <input type="text" name="image">
+    </div>
+    <div>
+        <label for="">enter package</label>
+        <input type="number" name="package">
+    </div>
+    <input type="submit" value="update job">
+   </form>
+<%- include('./partials/footer.ejs') %>
